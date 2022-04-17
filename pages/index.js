@@ -14,24 +14,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main>
   
+        <div className={styles.parento}>
         
-          <AnimatedWords identifier="poder" delayTime="1000">
-            Power
+          <AnimatedWords identifier="poder" delayTime="800">
+            Power&nbsp;
           </AnimatedWords>
     
           <AnimatedWords identifier="of" delayTime="600">
-            of
+            of&nbsp;
           </AnimatedWords>
 
           <AnimatedWords identifier="truths" delayTime="200">
             Truths
           </AnimatedWords>
 
+          {/* <AnimatedWords identifier="year" delayTime="1100">
+            2022
+          </AnimatedWords> */}
+          
 
+        </div>
        
-      
+   
       </main>
 
       <footer className={styles.footer}>

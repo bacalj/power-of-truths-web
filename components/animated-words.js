@@ -8,13 +8,13 @@ export default function AnimatedWords({ identifier, delayTime, children }){
             targets: `#${identifier}`,
             opacity: [0,1],
             scale: [100, 1],
-            duration: 3000,
+            duration: 2000,
             easing: 'linear',
             delay: delayTime
         })
     })
 
     return (
-        <span id={identifier}>{ children }</span>
+        <span className="animato" id={identifier}>{ children }</span>
     )
 }
