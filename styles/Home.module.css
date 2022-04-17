@@ -114,3 +114,8 @@
     flex-direction: column;
   }
 }
+
+.power {
+  font-size: 400%;
+  background-color:orange;
+} 

@@ -6,11 +6,15 @@ export default function AnimatedWords({ identifier, delayTime, children }){
     useEffect(() => {
         anime.timeline().add({
             targets: `#${identifier}`,
-            translateY:150,
+            opacity: [0,1],
+            scale: [100, 1],
+            duration: 3000,
+            easing: 'linear',
             delay: delayTime
         })
     })
+
     return (
-        <p id={identifier}>{ children }</p>
+        <span id={identifier}>{ children }</span>
     )
 }

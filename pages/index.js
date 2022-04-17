@@ -15,15 +15,23 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <AnimatedWords identifier="power" delayTime="1000">
-          Power
-        </AnimatedWords>
-        <AnimatedWords identifier="of" delayTime="700">
-          of
-        </AnimatedWords>
-        <AnimatedWords identifier="truths" delayTime="300">
-          Truths
-        </AnimatedWords>
+  
+        
+          <AnimatedWords identifier="poder" delayTime="1000">
+            Power
+          </AnimatedWords>
+    
+          <AnimatedWords identifier="of" delayTime="600">
+            of
+          </AnimatedWords>
+
+          <AnimatedWords identifier="truths" delayTime="200">
+            Truths
+          </AnimatedWords>
+
+
+       
+      
       </main>
 
       <footer className={styles.footer}>
