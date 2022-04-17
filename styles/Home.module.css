@@ -1,25 +1,73 @@
-.container {
-  padding: 0 2rem;
+.main{
+  display:flex;
+  flex-direction: column;
+  background:url('/sojourner.png');
+  background-position-x: 90%;
+  background-position-y: 30%;
+  backdrop-filter: grayscale(20%);
 }
 
-.parento{
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
+.main::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgba(39, 38, 36, 0.7);
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.year {
+  position: absolute;
+  top:40%;
+  font-size:50%;
+}
+
+.smally {
+  font-size: 80%;
+}
+.lettersin {
+  padding: 40px;
+  display:flex;
+  min-height:82vh;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 400%;
+  font-size: 370%;
+  font-family:'Special Elite', serif;
+}
+
+.subwords {
+  font-size: 43%;
+  z-index: 1002;
+  padding:10px;
+  align-items: center;
+}
+
+/* .lettersin:before {
+  content: "";
+  background-image: url('/sojourner.png');
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-position-y:20%;
+  background-position-x:60%;
+  filter: grayscale(50%);
+  filter: opacity(25%);
+} */
+
+.lettersin div {
+  color:whitesmoke;
 }
 
 .footer {
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  background-color:#010002;
+  color:bisque;
 }
 
 .footer a {
@@ -57,40 +105,31 @@
   font-size: 1.5rem;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
 
 .grid {
   display: flex;
+  min-height: 18vh;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  background: transparent;
+  z-index:1000;
 }
 
 .card {
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
-  color: inherit;
+  color: whitesmoke;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  font-family: 'Special Elite';
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  font-weight: bold;
 }
 
 .card h2 {
@@ -104,6 +143,10 @@
   line-height: 1.5;
 }
 
+.card a:hover {
+  text-decoration: underline;
+}
+
 .logo {
   height: 1em;
   margin-left: 0.5rem;
@@ -114,4 +157,24 @@
     width: 100%;
     flex-direction: column;
   }
+
+  .lettersin {
+    flex-direction: column;
+  }
+
+  .main {
+    background-position-x: 50%;
+  }
+}
+
+.content {
+  background-color: rgb(249, 250, 239);
+  z-index: 1001;
+  padding:40px;
+  color: #2E261F;
+}
+
+.content h2 {
+  font-family: 'Special Elite';
+  margin-top:4rem;
 }

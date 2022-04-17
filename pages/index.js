@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css'
 import Example from '../components/example'
 import AnimatedTitle from '../components/animated-words'
 import AnimatedWords from '../components/animated-words'
+import FadeWords from '../components/fade-words'
+import FadeYear from '../components/fade-year'
 
 export default function Home() {
   return (
@@ -12,13 +14,15 @@ export default function Home() {
         <title>Power of Truths Conference, 2022</title>
         <meta name="description" content="Power of Truths Conference" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
       </Head>
 
-      <main>
+      <main className={styles.main}>
   
-        <div className={styles.parento}>
-        
-          <AnimatedWords identifier="poder" delayTime="800">
+        <div className={styles.lettersin}>
+          <AnimatedWords identifier="poder" delayTime="400">
             Power&nbsp;
           </AnimatedWords>
     
@@ -26,17 +30,41 @@ export default function Home() {
             of&nbsp;
           </AnimatedWords>
 
-          <AnimatedWords identifier="truths" delayTime="200">
-            Truths
+          <AnimatedWords identifier="truths" delayTime="0">
+            Truths&nbsp;
           </AnimatedWords>
 
-          {/* <AnimatedWords identifier="year" delayTime="1100">
+          {/* <FadeYear identifier="year" delayTime="2500">
             2022
-          </AnimatedWords> */}
-          
+          </FadeYear> */}
 
+          <FadeWords identifier="subtitle" delayTime="2500">
+            Conference for Arts and Education - June 10, 2022
+          </FadeWords>
         </div>
-       
+
+        <div className={styles.grid}>
+          <div className={styles.card}>
+            <a href="#about">About</a>
+          </div>
+          <div className={styles.card}>
+            <a href="#register">Register</a>
+          </div>
+          <div className={styles.card}>
+            <a href="#schedule">Schedule</a>
+          </div>
+        </div>
+
+        <div className={styles.content}>
+          <h2 id="about">About</h2>
+          <p>Lorem ipsurem</p>
+
+          <h2 id="register">Register</h2>
+          <p>Lorem ipsurem</p>
+
+          <h2 id="register">Schedule</h2>
+          <p>Lorem ipsurem</p>
+        </div>
    
       </main>
 

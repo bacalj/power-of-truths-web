@@ -1,20 +1,21 @@
 import anime from 'animejs'
 import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 import { useEffect } from 'react'
+import styles from '../styles/Home.module.css'
 
-export default function AnimatedWords({ identifier, delayTime, children }){
+
+export default function FadeWords({ identifier, delayTime, children }){
     useEffect(() => {
         anime.timeline().add({
             targets: `#${identifier}`,
             opacity: [0,1],
-            scale: [100, 1],
-            duration: 2000,
+            duration: 330,
             easing: 'linear',
             delay: delayTime
         })
     })
 
     return (
-        <div id={identifier}>{ children }</div>
+        <div className={styles.subwords} id={identifier}>{ children }</div>
     )
 }
