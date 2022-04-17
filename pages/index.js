@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Example from '../components/example'
+import AnimatedTitle from '../components/animated-title'
 
 export default function Home() {
   return (
@@ -13,10 +14,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Example texto="hello"></Example>
-        <h1 className={styles.title}>
-          The Power of <a href="https://nextjs.org">Truths</a>
-        </h1>
+        <AnimatedTitle words="Power of Truths"></AnimatedTitle>
       </main>
 
       <footer className={styles.footer}>
