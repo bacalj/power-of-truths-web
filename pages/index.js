@@ -6,8 +6,12 @@ import AnimatedTitle from '../components/animated-words'
 import AnimatedWords from '../components/animated-words'
 import FadeWords from '../components/fade-words'
 import FadeYear from '../components/fade-year'
+import HomeContent from '../components/home-content'
+import sanityClient from '../client'
 
-export default function Home() {
+export default function Home({ sanityContent}) {
+  const fields = sanityContent[0]
+
   return (
     <div className={styles.container}>
       <Head>
@@ -34,12 +38,8 @@ export default function Home() {
             Truths&nbsp;
           </AnimatedWords>
 
-          {/* <FadeYear identifier="year" delayTime="2500">
-            2022
-          </FadeYear> */}
-
           <FadeWords identifier="subtitle" delayTime="2500">
-            Conference for Arts and Education - June 10, 2022
+            { fields.heroSubheading }
           </FadeWords>
         </div>
 
@@ -56,14 +56,7 @@ export default function Home() {
         </div>
 
         <div className={styles.content}>
-          <h2 id="about">About</h2>
-          <p>Lorem ipsurem</p>
-
-          <h2 id="register">Register</h2>
-          <p>Lorem ipsurem</p>
-
-          <h2 id="register">Schedule</h2>
-          <p>Lorem ipsurem</p>
+          <HomeContent content={fields.pageContent}></HomeContent>
         </div>
    
       </main>
@@ -73,4 +66,11 @@ export default function Home() {
       </footer>
     </div>
   )
+}
+
+export async function getStaticProps(context) {
+  const sanityContent = await sanityClient.fetch(`*[_type == "home"]`)
+  return {
+    props: { sanityContent }, // will be passed to the page component as props
+  }
 }

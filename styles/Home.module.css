@@ -179,4 +179,17 @@
 .content h2 {
   font-family: 'Special Elite';
   margin-top:4rem;
+  text-align: center;
+  font-size: 190%;
+}
+
+.content h3 {
+  font-family: 'Special Elite';
+  font-size:110%;
+  font-weight: 900;
+}
+
+.contento {
+  max-width: 800px;
+  margin: 0 auto;
 }
