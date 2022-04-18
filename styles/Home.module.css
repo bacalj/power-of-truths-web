@@ -3,8 +3,10 @@
   flex-direction: column;
   background:url('/sojourner.png');
   background-position-x: 90%;
-  background-position-y: 30%;
+  background-position-y:50%;
   backdrop-filter: grayscale(20%);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .main::before {
