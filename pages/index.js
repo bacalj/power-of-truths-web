@@ -39,7 +39,7 @@ export default function Home({ sanityContent}) {
           </AnimatedWords>
 
           <FadeWords identifier="subtitle" delayTime="2500">
-            { fields.heroSubheading }
+            {/* { fields.heroSubheading } */}
           </FadeWords>
         </div>
 
