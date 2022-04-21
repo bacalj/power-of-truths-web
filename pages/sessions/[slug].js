@@ -20,25 +20,14 @@ const Session = (props) => {
 }
 
 
-
-// export async function getStaticProps(context) {
-//     const sanityContent = await sanityClient.fetch(`*[_type == "session" && slug == ${slug}]`)
-//     return {
-//       props: { sanityContent }, // will be passed to the page component as props
-//     }
-//   }
-
-
-
 export async function getStaticPaths() {
-    console.log('get static paths: ')
+
     const paths = await sanityClient.fetch(
       `*[_type == "session" && defined(slug.current)][].slug.current`
     )
   
     const pathim = paths.map((slug) => ({params: {slug}}))
 
-    console.log(pathim)
     return {
       paths: pathim,
       fallback: true
@@ -46,11 +35,13 @@ export async function getStaticPaths() {
 }
   
   export async function getStaticProps(context) {
-    console.log(context.params.slug)
-    //It's important to default the slug so that it doesn't return "undefined"
+  
     const { slug = "" } = context.params
-    const session = await sanityClient.fetch(`*[_type == "session" && slug.current == "${context.params.slug}"]`)
-    console.log(session)
+
+    const session = await sanityClient.fetch(
+      `*[_type == "session" && slug.current == "${slug}"]`
+    )
+   
     return {
       props: {
         session
