@@ -108,7 +108,7 @@
 }
 
 
-.grid {
+/* .grid {
   display: flex;
   min-height: 18vh;
   align-items: center;
@@ -116,7 +116,7 @@
   flex-wrap: wrap;
   background: transparent;
   z-index:1000;
-}
+} */
 
 .card {
   margin: 1rem;
@@ -227,4 +227,8 @@
 .navwrap h2 {
   position: absolute;
   color:green;
+}
+
+.navbargrid {
+  border:3px solid orange;
 }

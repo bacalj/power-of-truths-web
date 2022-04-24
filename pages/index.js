@@ -27,6 +27,8 @@ export default function Home({ sanityContent}) {
       </Head>
 
       <main className={styles.main}>
+
+      <Navbar />
   
         <div className={styles.lettersin}>
           <AnimatedWords identifier="poder" delayTime="400">
@@ -45,8 +47,6 @@ export default function Home({ sanityContent}) {
             {/* { fields.heroSubheading } */}
           </FadeWords>
         </div>
-
-        <Navbar />
 
         <div className={styles.content}>
           <HomeContent 
