@@ -6,8 +6,13 @@ export default function Navbar(){
 
     const [stuck, setStuck] = useState(false)
 
+    const classim = clsx({
+        "stuck": stuck,
+        "navbar": true
+    })
+
     return (
-        <nav>
+        <nav className={ classim }>
             <div>
                 Power of Truths 2022
             </div>

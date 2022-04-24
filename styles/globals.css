@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.foo {
+  border:1px dotted orange;
+}
