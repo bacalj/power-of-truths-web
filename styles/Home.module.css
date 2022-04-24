@@ -187,9 +187,26 @@
   font-family: 'Special Elite';
   font-size:110%;
   font-weight: 900;
+  margin-top: 40px;
 }
 
 .contento {
   max-width: 800px;
+  margin: 0 auto;
+  line-height: 23px;
+}
+
+.sessiontitle a:hover {
+  cursor: pointer;
+  text-decoration: underline !important;
+  font-weight: bold;
+}
+
+.sessiontitle td {
+  padding:10px 20px;;
+}
+
+.sessiontable {
+  width:50%;
   margin: 0 auto;
 }

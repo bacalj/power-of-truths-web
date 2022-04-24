@@ -10,7 +10,9 @@ import HomeContent from '../components/home-content'
 import sanityClient from '../client'
 
 export default function Home({ sanityContent}) {
-  const fields = sanityContent[0]
+
+  const fields = sanityContent.homeContent[0]
+  const sessions = sanityContent.sessionListings
 
   return (
     <div className={styles.container}>
@@ -56,7 +58,11 @@ export default function Home({ sanityContent}) {
         </div>
 
         <div className={styles.content}>
-          <HomeContent content={fields.pageContent}></HomeContent>
+          <HomeContent 
+            content={fields.pageContent}
+            sessions={sessions}
+          >
+          </HomeContent>
         </div>
    
       </main>
@@ -69,7 +75,12 @@ export default function Home({ sanityContent}) {
 }
 
 export async function getStaticProps(context) {
-  const sanityContent = await sanityClient.fetch(`*[_type == "home"]`)
+  const sanityContent = await sanityClient.fetch(`
+    {
+      "homeContent": *[_type == "home"],
+      "sessionListings": *[_type == "session" && !(_id in path("drafts.**"))]
+    }
+  `)
   return {
     props: { sanityContent }, // will be passed to the page component as props
   }
