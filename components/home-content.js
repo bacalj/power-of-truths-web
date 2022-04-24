@@ -1,6 +1,28 @@
 import { PortableText } from "@portabletext/react";
-import styles from '../styles/Home.module.css'
-import Link from "next/link";
+import imageUrlBuilder from '@sanity/image-url'
+
+
+function urlFor (source) {
+    return imageUrlBuilder(sanityClient).image(source)
+}
+
+const ptComponents = {
+    types: {
+      image: ({ value }) => {
+        if (!value?.asset?._ref) {
+          return null
+        }
+        return (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            alt={value.alt || ' '}
+            loading="lazy"
+            src={urlFor(value).width(320).height(240).fit('max').auto('format')}
+          />
+        )
+      }
+    }
+}
 
 export default function HomeContent(props){
 
@@ -27,7 +49,7 @@ export default function HomeContent(props){
         <div className="homecontent">
             <h2 id="about">About</h2>
             
-            <PortableText value={content} />
+            <PortableText value={content} components={ ptComponents } />
     
             <h2 id="schedule">Schedule</h2>
             <ul>
