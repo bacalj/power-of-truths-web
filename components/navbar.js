@@ -5,22 +5,12 @@ import clsx from 'clsx'
 export default function Navbar(){
 
     const [stuck, setStuck] = useState(false)
-    const navito = useRef()
-
-    // useEffect(()=>{
-    //     window.addEventListener("scroll", ()=>{
-    //         const pos = navito.current.getBoundingClientRect()
-    //         if (pos.top > 0){
-    //             setStuck(false)
-    //         } else {
-    //             setStuck(true)
-    //         }
-    //         console.log(stuck)
-    //     })
-    // },[])
 
     return (
-        <div ref={navito}>
+        <nav>
+            <div>
+                Power of Truths 2022
+            </div>
             <div>
                 <a href="#about">About</a>
             </div>
@@ -30,6 +20,6 @@ export default function Navbar(){
             <div>
                 <a href="#schedule">Schedule</a>
             </div>
-        </div>
+        </nav>
     )
 }

@@ -1,42 +1,41 @@
 import { useRouter } from 'next/router'
 import sanityClient from '../../client'
-import styles from '../../styles/Home.module.css'
 import { PortableText } from "@portabletext/react";
 import Navbar from '../../components/navbar';
+import Head from 'next/head';
 
 
 const Session = (props) => {
-  console.log(props.session[0])
+
   const { title, time, description } = props.session[0]
   const router = useRouter()
-  const { slug } = router.query
 
   return ( 
-    <div className={styles.container}>
-      <div className={styles.navwrap}>
-        <h2>Power of Truths 2022</h2>
-        <Navbar />
-      </div>
+    <>
+      <Head>
+        <title>Power of Truths Conference, 2022 | Session: {title}</title>
+        <meta name="description" content="Power of Truths Conference" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Navbar />
+
       <main>
-        <div className={styles.contento}>
-          <h2>{ title }</h2>
-          <h3>{ time }</h3>
-          <hr />
-          <PortableText value={description} />
-        </div>
+        <h2>{ title }</h2>
+        <p>{ time }</p>
+        <hr />
+        <PortableText value={description} />
       </main>
-    </div>
+    </>
   )
   
 }
 
 
 export async function getStaticPaths() {
-
     const paths = await sanityClient.fetch(
       `*[_type == "session" && defined(slug.current)][].slug.current`
     )
-  
     const pathim = paths.map((slug) => ({params: {slug}}))
 
     return {

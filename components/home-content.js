@@ -8,10 +8,10 @@ export default function HomeContent(props){
 
     function sessionItem(s){
         return (
-            <li key={s._id} className={styles.sessiontitle}>
+            <li key={s._id}>
                 <a href={`/sessions/${s.slug.current}`}>
-                    <div className={styles.sessionrow}>
-                        <div className={styles.timeitem}>
+                    <div>
+                        <div>
                             { s.time }
                         </div>
                         <div>
@@ -24,19 +24,19 @@ export default function HomeContent(props){
     }
 
     return (
-        <div className={styles.contento}>
+        <div className="homecontent">
             <h2 id="about">About</h2>
             
             <PortableText value={content} />
     
             <h2 id="schedule">Schedule</h2>
-
-            <ul className={styles.sessiontable}>
+            <ul>
                 { sessions.map( s => sessionItem(s))}
             </ul>
 
             <h2 id="register">Register</h2>
             <p>Lorem ipsurem</p>
+
         </div>
     )
 }
