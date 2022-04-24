@@ -3,6 +3,7 @@ import sanityClient from '../../client'
 import { PortableText } from "@portabletext/react";
 import Navbar from '../../components/navbar';
 import Head from 'next/head';
+import SiteTitle from '../../components/site-title';
 
 
 const Session = (props) => {
@@ -18,6 +19,7 @@ const Session = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <SiteTitle flying={false} />
       <Navbar />
 
       <main>

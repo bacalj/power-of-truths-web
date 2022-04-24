@@ -8,14 +8,12 @@ export default function Navbar(){
 
     const classim = clsx({
         "stuck": stuck,
+        "free": !stuck,
         "navbar": true
     })
 
     return (
         <nav className={ classim }>
-            <div>
-                Power of Truths 2022
-            </div>
             <div>
                 <a href="#about">About</a>
             </div>

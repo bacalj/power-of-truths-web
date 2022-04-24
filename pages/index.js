@@ -3,8 +3,9 @@ import Image from 'next/image'
 import HomeContent from '../components/home-content'
 import sanityClient from '../client'
 import Navbar from '../components/navbar'
-import FlyingWords from '../components/flying-words'
+import FlyingWords from '../components/site-title'
 import Footer from '../components/footer'
+import SiteTitle from '../components/site-title'
 
 export default function Home({ sanityContent}) {
 
@@ -19,10 +20,10 @@ export default function Home({ sanityContent}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <SiteTitle flying={true} />
       <Navbar />
 
       <main>
-        <FlyingWords />
         <HomeContent content={fields.pageContent} sessions={sessions} />
       </main>
 
