@@ -8,7 +8,6 @@ export default function HomeContent(props){
 
     function sessionItem(s){
         return (
-            
             <li key={s._id} className={styles.sessiontitle}>
                 <a href={`/sessions/${s.slug.current}`}>
                     <div className={styles.sessionrow}>
@@ -20,11 +19,8 @@ export default function HomeContent(props){
                         </div>
                     </div>
                 </a>
-            </li>
-            
+            </li> 
         )
-
-     
     }
 
     return (
