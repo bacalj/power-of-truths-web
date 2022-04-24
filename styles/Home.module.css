@@ -202,11 +202,29 @@
   font-weight: bold;
 }
 
-.sessiontitle td {
-  padding:10px 20px;;
+.sessiontable {
+  width:500px;
+  margin: 0 auto;
+  list-style-type: none;
 }
 
-.sessiontable {
-  width:50%;
-  margin: 0 auto;
+.sessiontable td {
+  border:1px solid red;
+}
+
+.sessionrow {
+  display:flex;
+}
+
+.sessionrow div {
+  width: 50%;
+}
+
+.navwrap {
+  background-color: #010002;
+}
+
+.navwrap h2 {
+  position: absolute;
+  color:green;
 }

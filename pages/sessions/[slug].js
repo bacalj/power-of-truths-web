@@ -1,20 +1,31 @@
 import { useRouter } from 'next/router'
 import sanityClient from '../../client'
 import styles from '../../styles/Home.module.css'
-
+import { PortableText } from "@portabletext/react";
+import Navbar from '../../components/navbar';
 
 
 const Session = (props) => {
-  const { title, time } = props.session[0]
+  console.log(props.session[0])
+  const { title, time, description } = props.session[0]
   const router = useRouter()
   const { slug } = router.query
 
   return ( 
-      <>
-        <pre>slug: {slug}</pre>
-        <p>Rendering data from dynamic slug yay: { title } session happening at ( { time } )</p>
-
-      </>
+    <div className={styles.container}>
+      <div className={styles.navwrap}>
+        <h2>Power of Truths 2022</h2>
+        <Navbar />
+      </div>
+      <main>
+        <div className={styles.contento}>
+          <h2>{ title }</h2>
+          <h3>{ time }</h3>
+          <hr />
+          <PortableText value={description} />
+        </div>
+      </main>
+    </div>
   )
   
 }

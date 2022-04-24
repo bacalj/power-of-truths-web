@@ -8,6 +8,7 @@ import FadeWords from '../components/fade-words'
 import FadeYear from '../components/fade-year'
 import HomeContent from '../components/home-content'
 import sanityClient from '../client'
+import Navbar from '../components/navbar'
 
 export default function Home({ sanityContent}) {
 
@@ -45,17 +46,7 @@ export default function Home({ sanityContent}) {
           </FadeWords>
         </div>
 
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <a href="#about">About</a>
-          </div>
-          <div className={styles.card}>
-            <a href="#register">Register</a>
-          </div>
-          <div className={styles.card}>
-            <a href="#schedule">Schedule</a>
-          </div>
-        </div>
+        <Navbar />
 
         <div className={styles.content}>
           <HomeContent 
@@ -78,7 +69,7 @@ export async function getStaticProps(context) {
   const sanityContent = await sanityClient.fetch(`
     {
       "homeContent": *[_type == "home"],
-      "sessionListings": *[_type == "session" && !(_id in path("drafts.**"))]
+      "sessionListings": *[_type == "session" && !(_id in path("drafts.**"))] | order(order asc)
     }
   `)
   return {

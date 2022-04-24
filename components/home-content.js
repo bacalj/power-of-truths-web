@@ -8,16 +8,20 @@ export default function HomeContent(props){
 
     function sessionItem(s){
         return (
-            <tr key={s._id} className={styles.sessiontitle}>
-                <td>
-                    { s.time }
-                </td>
-                <td>
-                    <Link href={`/sessions/${s.slug.current}`} passHref>
-                        { s.title }
-                    </Link>
-                </td>
-            </tr>
+            
+            <li key={s._id} className={styles.sessiontitle}>
+                <a href={`/sessions/${s.slug.current}`}>
+                    <div className={styles.sessionrow}>
+                        <div className={styles.timeitem}>
+                            { s.time }
+                        </div>
+                        <div>
+                            { s.title }
+                        </div>
+                    </div>
+                </a>
+            </li>
+            
         )
 
      
@@ -31,9 +35,9 @@ export default function HomeContent(props){
     
             <h2 id="schedule">Schedule</h2>
 
-            <table className={styles.sessiontable}>
+            <ul className={styles.sessiontable}>
                 { sessions.map( s => sessionItem(s))}
-            </table>
+            </ul>
 
             <h2 id="register">Register</h2>
             <p>Lorem ipsurem</p>
