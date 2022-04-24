@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 import styles from '../styles/Home.module.css'
 import clsx from 'clsx'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 export default function Navbar(){
 
@@ -15,13 +17,13 @@ export default function Navbar(){
     return (
         <nav className={ classim }>
             <div>
-                <a href="#about">About</a>
+                <Link href="/#about">About</Link>
             </div>
             <div>
-                <a href="#register">Register</a>
+                <Link href="/#register">Register</Link>
             </div>
             <div>
-                <a href="#schedule">Schedule</a>
+                <Link href="/#schedule">Schedule</Link>
             </div>
         </nav>
     )
