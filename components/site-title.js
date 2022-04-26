@@ -8,6 +8,7 @@ export default function SiteTitle({ flying }){
   if (flying){
     return (
       <div className="titlecanvas big">
+        <div className="filterator"></div>
         <div className="flying sitetitle">
           <AnimatedWords identifier="poder" delayTime="400">
             Power&nbsp;

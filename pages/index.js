@@ -20,9 +20,13 @@ export default function Home({ sanityContent}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+    
       <SiteTitle flying={true} />
 
+      
       <Navbar />
+
+      
 
       <main>
         <HomeContent content={fields.pageContent} sessions={sessions} />

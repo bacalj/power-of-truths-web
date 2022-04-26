@@ -41,6 +41,8 @@ h2, h3, h4, .sitetitle, .navbar div {
 
 .free.navbar {
   position: inherit;
+  background: rgb(46,38,31);
+  /* background: linear-gradient(180deg, rgba(46,38,31,1) 0%, rgb(37, 30, 24) 54%);} */
 }
 
 .navbar nav, .navbar div {
@@ -63,8 +65,27 @@ h2, h3, h4, .sitetitle, .navbar div {
 .titlecanvas {
   /* height:400px; */
   height: calc(100vh - 80px);
-  background-color: #2E261F;
+  /* background-color: #2E261F; */
+  background:url('/sojourner.png');
+  background-position-x: 90%;
+  background-position-y:50%;
+  backdrop-filter: grayscale(90%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index:100;
 }
+
+/* .titlecanvas::after {
+  content: "";
+  height:100vh;
+  width: 100%;
+  background-color: rgba(39, 38, 36, 0.7);
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:200;
+} */
 
 .sitetitle {
   display:flex;
@@ -72,9 +93,19 @@ h2, h3, h4, .sitetitle, .navbar div {
   justify-content: center;
   align-items: center;
   height:100%;
+  font-size: 400%;
   color:white;
+  position: relative;
 }
 
+.filterator {
+  position: absolute;
+  height:calc(100vh - 80px);
+  width:100%;
+  top:0;
+  background: rgb(46,38,31);
+background: linear-gradient(0deg, rgba(46,38,31,1) 0%, rgba(46,38,31,0.5369565217391304) 62%);
+}
 /* .titlecanvas.small {
   height:100px;
   background-color: #2E261F;
@@ -85,15 +116,4 @@ h2, h3, h4, .sitetitle, .navbar div {
 
 /* .sitetitle {
   display:flex;
-} */
-
-/* .sitetitle::after {
-  content: "";
-  height:100vh;
-  width: 100%;
-  background-color: rgba(39, 38, 36, 0.7);
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:200;
 } */
