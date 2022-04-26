@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import { PortableText } from "@portabletext/react";
 import Navbar from '../../components/navbar';
 import Head from 'next/head';
@@ -8,7 +7,6 @@ import { sClient, ptComponents } from '../../client';
 const Session = (props) => {
 
   const { title, time, description } = props.session[0]
-  const router = useRouter()
 
   return ( 
     <>
@@ -38,6 +36,7 @@ export async function getStaticPaths() {
     const paths = await sClient.fetch(
       `*[_type == "session" && defined(slug.current)][].slug.current`
     )
+
     const pathim = paths.map((slug) => ({params: {slug}}))
 
     return {
