@@ -7,29 +7,35 @@ export default function SiteTitle({ flying }){
     
   if (flying){
     return (
-      <section className="flyingwords sitetitle">
-        <AnimatedWords identifier="poder" delayTime="400">
-          Power&nbsp;
-        </AnimatedWords>
-  
-        <AnimatedWords identifier="of" delayTime="600">
-          of&nbsp;
-        </AnimatedWords>
+      <div className="titlecanvas big">
+        <div className="flying sitetitle">
+          <AnimatedWords identifier="poder" delayTime="400">
+            Power&nbsp;
+          </AnimatedWords>
+    
+          <AnimatedWords identifier="of" delayTime="600">
+            of&nbsp;
+          </AnimatedWords>
 
-        <AnimatedWords identifier="truths" delayTime="0">
-          Truths&nbsp;
-        </AnimatedWords>
+          <AnimatedWords identifier="truths" delayTime="0">
+            Truths&nbsp;
+          </AnimatedWords>
 
-        <FadeWords identifier="subtitle" delayTime="2500">
-          {/* { fields.heroSubheading } */}
-        </FadeWords>
-      </section>
+          {/* <FadeWords identifier="subtitle" delayTime="2500">
+             { fields.heroSubheading } 
+          </FadeWords> */}
+        </div>
+      </div>
     )
-  } else {
+  } 
+  
+  else {
     return (
-      <section className="sitetitle">
-        <div>Power of Truths</div>
-      </section>
+      <div className="titlecanvas small">
+        <div className="sitetitle">
+          <div>Power of Truths</div>
+        </div>
+      </div>
     )
   }
     

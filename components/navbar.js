@@ -6,25 +6,53 @@ import Link from 'next/link'
 
 export default function Navbar(){
 
+    const theroute = useRouter()
     const [stuck, setStuck] = useState(false)
 
+    useEffect(() => {
+        window.addEventListener('scroll', manageNavbar)
+
+        return () => {
+            window.removeEventListener('scroll', manageNavbar)
+        }
+    }, [])
+
+    const manageNavbar = () => {
+        //const navbarY = document.querySelector('.navbar').getBoundingClientRect().y
+        const tripPoint = window.scrollY + 100
+        console.log("---")
+        console.log("window height:", window.innerHeight)
+        //console.log("navbarY:", navbarY)
+        console.log("SCROLL Y:", window.scrollY)
+        if ( tripPoint > window.innerHeight ){
+            setStuck(true)
+        } else {
+            setStuck(false)
+        }
+    }
+
     const classim = clsx({
-        "stuck": stuck,
-        "free": !stuck,
+        "stuck": stuck || theroute.pathname == "/sessions/[slug]",
+        "free": !stuck && theroute.pathname == "/",
         "navbar": true
     })
 
     return (
-        <nav className={ classim }>
-            <div>
-                <Link href="/#about">About</Link>
+        <div className={ classim }>
+            <div className="brand">
+                <Link href="/">Power of Truths Conference 2022</Link>
             </div>
-            <div>
-                <Link href="/#register">Register</Link>
-            </div>
-            <div>
-                <Link href="/#schedule">Schedule</Link>
-            </div>
-        </nav>
+            <nav>
+                <div>
+                    <Link href="/#about">About</Link>
+                </div>
+                <div>
+                    <Link href="/#register">Register</Link>
+                </div>
+                <div>
+                    <Link href="/#schedule">Schedule</Link>
+                </div>
+            </nav>
+        </div>
     )
 }

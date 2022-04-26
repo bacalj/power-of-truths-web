@@ -58,7 +58,6 @@ export default function HomeContent(props){
 
             <h2 id="register">Register</h2>
             <p>Lorem ipsurem</p>
-
         </div>
     )
 }

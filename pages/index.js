@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import HomeContent from '../components/home-content'
-import sanityClient from '../client'
 import Navbar from '../components/navbar'
 import FlyingWords from '../components/site-title'
 import Footer from '../components/footer'
 import SiteTitle from '../components/site-title'
+import { sClient, ptComponents } from '../client'
 
 export default function Home({ sanityContent}) {
 
@@ -21,6 +21,7 @@ export default function Home({ sanityContent}) {
       </Head>
 
       <SiteTitle flying={true} />
+
       <Navbar />
 
       <main>
@@ -33,7 +34,7 @@ export default function Home({ sanityContent}) {
 }
 
 export async function getStaticProps(context) {
-  const sanityContent = await sanityClient.fetch(`{
+  const sanityContent = await sClient.fetch(`{
       "homeContent": *[_type == "home"],
       "sessionListings": *[_type == "session" && !(_id in path("drafts.**"))] | order(order asc)
     }`)
