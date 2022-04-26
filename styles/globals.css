@@ -143,3 +143,15 @@ footer {
   margin-top:60px;
   font-family: 'Special Elite';
 }
+
+#poder {
+  color: red;
+}
+
+#of {
+  color: white;
+}
+
+#truths {
+  color: blue;
+}
