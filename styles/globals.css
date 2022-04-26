@@ -1,8 +1,9 @@
 html,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+    font-family: 'Open Sans';
   background-color: rgb(247, 247, 244);
   color: #2E261F;
   font-size: 105%;
@@ -60,6 +61,16 @@ h2, h3, h4, .sitetitle, .navbar div {
   padding:0px 60px;
   max-width: 960px;
   margin-top:100px;
+  line-height: 1.2;
+}
+
+.sessioncontent h2, 
+.sessioncontent h3,
+.sessioncontent h4,
+.homecontent h2, 
+.homecontent h3, 
+.homecontent h4 {
+  margin-top: 60px;
 }
 
 .titlecanvas {
@@ -117,3 +128,18 @@ background: linear-gradient(0deg, rgba(46,38,31,1) 0%, rgba(46,38,31,0.536956521
 /* .sitetitle {
   display:flex;
 } */
+
+.reglink, footer a {
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding:60px;
+  color:white;
+  background-color: #2E261F;
+  margin-top:60px;
+  font-family: 'Special Elite';
+}

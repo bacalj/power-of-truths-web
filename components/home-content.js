@@ -52,12 +52,16 @@ export default function HomeContent(props){
             <PortableText value={content} components={ ptComponents } />
     
             <h2 id="schedule">Schedule</h2>
-            <ul>
+            {/* <ul>
                 { sessions.map( s => sessionItem(s))}
-            </ul>
+            </ul> */}
+
+            <p><em>Complete schedule coming soon</em></p>
 
             <h2 id="register">Register</h2>
-            <p>Lorem ipsurem</p>
+
+            <a className="reglink" href="https://forms.gle/mCXeZq8k4376uVEz5">Click here to pre-register</a>
+            
         </div>
     )
 }
