@@ -27,22 +27,25 @@ h2, h3, h4, .sitetitle, .navbar div {
   display:flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: #2E261F;
+  color:white;
+  align-content:center;
+  height: 80px;
 }
 
 .stuck.navbar {
   top: 0;
   position: fixed;
   width:100%;
-  background-color: #2E261F;
-  color:white;
 }
 
 .free.navbar {
   position: inherit;
 }
 
-.navbar nav {
+.navbar nav, .navbar div {
   display:flex;
+  align-self: center;
 }
 
 .navbar div {
@@ -52,14 +55,15 @@ h2, h3, h4, .sitetitle, .navbar div {
 
 .sessioncontent, .homecontent {
   margin: 0 auto;
-  padding:60px;
+  padding:0px 60px;
   max-width: 960px;
+  margin-top:100px;
 }
 
 .titlecanvas {
   /* height:400px; */
   height: calc(100vh - 80px);
-  border:1px dotted red;
+  background-color: #2E261F;
 }
 
 .sitetitle {
@@ -68,8 +72,7 @@ h2, h3, h4, .sitetitle, .navbar div {
   justify-content: center;
   align-items: center;
   height:100%;
-  color:orange;
-  border:1px dotted orange;
+  color:white;
 }
 
 /* .titlecanvas.small {
