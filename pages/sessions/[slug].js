@@ -41,13 +41,13 @@ export async function getStaticPaths() {
 
     return {
       paths: pathim,
-      fallback: true
+      fallback: false
     }
 }
   
 export async function getStaticProps(context) {
   
-    const { slug = "" } = context.params
+    const { slug = null } = context.params
 
     const session = await sClient.fetch(
       `*[_type == "session" && slug.current == "${slug}"]`
