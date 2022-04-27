@@ -56,6 +56,9 @@ export default function HomeContent(props){
                 { sessions.map( s => sessionItem(s))}
             </ul> */}
 
+            <p>Power of Truths 2022 will be held June 10-11, 2022 at the <a href="https://bombyx.live/about/">Bombyx Center for Arts &amp; Equity</a> in Florence, Massachusetts</p>
+
+
             <p><em>Complete schedule coming soon</em></p>
 
             <h2 id="register">Register</h2>
