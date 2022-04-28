@@ -7,6 +7,7 @@ import Footer from '../components/footer'
 import SiteTitle from '../components/site-title'
 import { sClient, ptComponents } from '../client'
 
+
 export default function Home({ sanityContent}) {
 
   const fields = sanityContent.homeContent[0]
@@ -21,7 +22,7 @@ export default function Home({ sanityContent}) {
       </Head>
 
     
-      <SiteTitle flying={true} />
+      <SiteTitle flying={true} subheading={fields.heroSubheading} />
 
       
       <Navbar />
@@ -29,7 +30,13 @@ export default function Home({ sanityContent}) {
       
 
       <main>
-        <HomeContent content={fields.pageContent} sessions={sessions} />
+        <HomeContent 
+          about={fields.pageContent} 
+          sessions={sessions} 
+          schedule={fields.scheduleContent}
+          register={fields.registerContent}
+          video={fields.introVideo}
+        />
       </main>
 
       <Footer />
@@ -46,3 +53,4 @@ export async function getStaticProps(context) {
     props: { sanityContent }, // passed to page component as props
   }
 }
+

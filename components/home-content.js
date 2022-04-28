@@ -1,6 +1,5 @@
 import { PortableText } from "@portabletext/react";
-import imageUrlBuilder from '@sanity/image-url'
-
+import imageUrlBuilder from '@sanity/image-url';
 
 function urlFor (source) {
     return imageUrlBuilder(sanityClient).image(source)
@@ -25,8 +24,7 @@ const ptComponents = {
 }
 
 export default function HomeContent(props){
-
-    const { sessions, content } = props
+    const { sessions, about, schedule, register, video } = props
 
     function sessionItem(s){
         return (
@@ -47,23 +45,27 @@ export default function HomeContent(props){
 
     return (
         <div className="homecontent">
-            <h2 id="about">About</h2>
+
+            <iframe
+                src="https://player.cloudinary.com/embed/?cloud_name=jbmtl75&public_id=see/Power_of_Truths_promo_V2_rjvmio&fluid=true&controls=true&source_types%5B0%5D=mp4"
+                width="440"
+                height="300"
+                allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                allowFullScreen
+                frameBorder="0"
+            ></iframe>
             
-            <PortableText value={content} components={ ptComponents } />
-    
+            <h2 id="about">About</h2>
+            <PortableText value={about} components={ ptComponents } />
+
             <h2 id="schedule">Schedule</h2>
+            <PortableText value={schedule} components={ ptComponents } />
             {/* <ul>
                 { sessions.map( s => sessionItem(s))}
             </ul> */}
 
-            <p>Power of Truths 2022 will be held June 10-11, 2022 at the <a href="https://bombyx.live/about/">Bombyx Center for Arts &amp; Equity</a> in Florence, Massachusetts</p>
-
-
-            <p><em>Complete schedule coming soon</em></p>
-
             <h2 id="register">Register</h2>
-
-            <a className="reglink" href="https://forms.gle/mCXeZq8k4376uVEz5">Click here to pre-register</a>
+            <PortableText value={register} components={ ptComponents } />
             
         </div>
     )
