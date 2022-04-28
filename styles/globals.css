@@ -85,6 +85,12 @@ h2, h3, h4, .sitetitle, .navbar div {
   background-size: cover;
   position: relative;
   z-index:100;
+  animation: fadein 3s;
+}
+
+@keyframes fadein {
+  from {opacity: 0.0;}
+  to {opacity: 1;}
 }
 
 /* .titlecanvas::after {
