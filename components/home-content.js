@@ -48,8 +48,6 @@ export default function HomeContent(props){
 
             <iframe
                 src="https://player.cloudinary.com/embed/?cloud_name=jbmtl75&public_id=see/Power_of_Truths_promo_V2_rjvmio&fluid=true&controls=true&source_types%5B0%5D=mp4"
-                width="440"
-                height="300"
                 allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
                 allowFullScreen
                 frameBorder="0"
@@ -65,7 +63,10 @@ export default function HomeContent(props){
             </ul> */}
 
             <h2 id="register">Register</h2>
-            <PortableText value={register} components={ ptComponents } />
+            <div className="register-wrap">
+                <PortableText value={register} components={ ptComponents } />
+            </div>
+            
             
         </div>
     )
