@@ -115,8 +115,28 @@ h2, h3, h4, .sitetitle, .navbar div {
   position: relative;
 }
 
+.sub {
+  font-size: 120%;
+  color:aliceblue;
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  font-family: 'Special Elite';
+  z-index:300 !important;
+  width:100%;
+}
+
+.sub a {
+  text-decoration: underline;
+}
+
 .sitetitle > div {
   padding:30px;
+}
+
+.maintitle-wrap {
+  display: flex;
+  flex-direction: column;
 }
 
 .maintitle {

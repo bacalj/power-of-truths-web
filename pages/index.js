@@ -21,7 +21,8 @@ export default function Home({ sanityContent}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-    
+      <div className="sub">Power of Truths is Presented in Collaboration with <a href="https://selfevidenteducation.com">Self-Evident Education</a></div>
+
       <SiteTitle flying={true} subheading={fields.heroSubheading} />
 
       

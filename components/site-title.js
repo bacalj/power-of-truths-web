@@ -13,19 +13,23 @@ export default function SiteTitle({ flying, subheading }){
         <div className="filterator"></div>
         <div className="flying sitetitle">
 
-          <div className="maintitle">
-            <AnimatedWords identifier="poder" delayTime="400">
-              Power&nbsp;
-            </AnimatedWords>
-      
-            <AnimatedWords identifier="of" delayTime="600">
-              of&nbsp;
-            </AnimatedWords>
+          <div className="maintitle-wrap">
+            <div className="maintitle">
+              <AnimatedWords identifier="poder" delayTime="400">
+                Power&nbsp;
+              </AnimatedWords>
+        
+              <AnimatedWords identifier="of" delayTime="600">
+                of&nbsp;
+              </AnimatedWords>
 
-            <AnimatedWords identifier="truths" delayTime="0">
-              Truths&nbsp;
-            </AnimatedWords>
+              <AnimatedWords identifier="truths" delayTime="0">
+                Truths&nbsp;
+              </AnimatedWords>           
+            </div>
+
           </div>
+
 
           <div className="subtitle">
             <FadeWords identifier="subtitle" delayTime="2500">
