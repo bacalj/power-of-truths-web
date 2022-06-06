@@ -254,3 +254,9 @@ footer {
   border-radius: 4px !important;
   font-size: 130%;
 }
+
+@media screen and ( max-height: 699px ) { 
+  .flying.sitetitle {
+    padding-top: 112px;
+  }
+}
