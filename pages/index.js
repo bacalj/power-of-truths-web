@@ -16,7 +16,7 @@ export default function Home({ sanityContent}) {
   return (
     <>
       <Head>
-        <title>Power of Truths Conference, 2022</title>
+        <title>Power of Truths Conference, 2023</title>
         <meta name="description" content="Power of Truths Conference" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -25,15 +25,15 @@ export default function Home({ sanityContent}) {
 
       <SiteTitle flying={true} subheading={fields.heroSubheading} />
 
-      
+
       <Navbar />
 
-      
+
 
       <main>
-        <HomeContent 
-          about={fields.pageContent} 
-          sessions={sessions} 
+        <HomeContent
+          about={fields.pageContent}
+          sessions={sessions}
           schedule={fields.scheduleContent}
           register={fields.registerContent}
           video={fields.introVideo}

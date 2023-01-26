@@ -6,7 +6,7 @@ import FadeYear from './fade-year'
 import { ptComponents } from '../client'
 
 export default function SiteTitle({ flying, subheading }){
-    
+
   if (flying){
     return (
       <div className="titlecanvas big">
@@ -15,33 +15,33 @@ export default function SiteTitle({ flying, subheading }){
 
           <div className="maintitle-wrap">
             <div className="maintitle">
-              <AnimatedWords identifier="poder" delayTime="400">
+              {/* <AnimatedWords identifier="poder" delayTime="400"> */}
                 Power&nbsp;
-              </AnimatedWords>
-        
-              <AnimatedWords identifier="of" delayTime="600">
-                of&nbsp;
-              </AnimatedWords>
+              {/* </AnimatedWords> */}
 
-              <AnimatedWords identifier="truths" delayTime="0">
+              {/* <AnimatedWords identifier="of" delayTime="600"> */}
+                of&nbsp;
+              {/* </AnimatedWords> */}
+
+              {/* <AnimatedWords identifier="truths" delayTime="0"> */}
                 Truths&nbsp;
-              </AnimatedWords>           
+              {/* </AnimatedWords>            */}
             </div>
 
           </div>
 
 
           <div className="subtitle">
-            <FadeWords identifier="subtitle" delayTime="2500">
+            {/* <FadeWords identifier="subtitle" delayTime="2500"> */}
                 <PortableText value={subheading} components={ ptComponents } />
-            </FadeWords> 
+            {/* </FadeWords>  */}
           </div>
 
         </div>
       </div>
     )
-  } 
-  
+  }
+
   else {
     return (
       <div className="titlecanvas small">
@@ -51,5 +51,5 @@ export default function SiteTitle({ flying, subheading }){
       </div>
     )
   }
-    
+
 }

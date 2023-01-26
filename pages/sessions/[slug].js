@@ -8,10 +8,10 @@ const Session = (props) => {
 
   const { title, time, description } = props.session[0]
 
-  return ( 
+  return (
     <>
       <Head>
-        <title>Power of Truths Conference, 2022 | Session: {title}</title>
+        <title>Power of Truths Conference, 2023 | Session: {title}</title>
         <meta name="description" content="Power of Truths Conference" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -28,7 +28,7 @@ const Session = (props) => {
       </main>
     </>
   )
-  
+
 }
 
 
@@ -44,15 +44,15 @@ export async function getStaticPaths() {
       fallback: false
     }
 }
-  
+
 export async function getStaticProps(context) {
-  
+
     const { slug = null } = context.params
 
     const session = await sClient.fetch(
       `*[_type == "session" && slug.current == "${slug}"]`
     )
-   
+
     return {
       props: {
         session

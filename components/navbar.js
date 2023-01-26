@@ -40,7 +40,7 @@ export default function Navbar(){
     return (
         <div className={ classim }>
             <div className="brand">
-                <Link href="/">Power of Truths Conference 2022</Link>
+                <Link href="/">Power of Truths Conference 2023</Link>
             </div>
             <nav>
                 <div>
