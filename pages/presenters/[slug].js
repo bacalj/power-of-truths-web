@@ -1,17 +1,22 @@
 import { PortableText } from "@portabletext/react";
 import Navbar from '../../components/navbar';
 import Head from 'next/head';
+import imageUrlBuilder from '@sanity/image-url';
 import { sClient, ptComponents } from '../../client';
 
+function urlFor(source) {
+  return imageUrlBuilder(sClient).image(source)
+}
 
-const Session = (props) => {
+const Presenter = (props) => {
 
-  const { title, time, description } = props.session[0]
+  const { name, description, image } = props.presenter[0]
+  const imgUrl = urlFor(image).width(320).height(240).fit('max').auto('format').url();
 
   return (
     <>
       <Head>
-        <title>Power of Truths Conference, 2023 | Session: {title}</title>
+        <title>Power of Truths Conference, 2023 | Presenter: {name}</title>
         <meta name="description" content="Power of Truths Conference" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -20,8 +25,11 @@ const Session = (props) => {
 
       <main>
         <div className="sessioncontent">
-          <h2>{ title }</h2>
-          <p>{ time }</p>
+          <div className="image-container" style={{textAlign: "center"}}>
+            <img src={imgUrl} />
+            <h2>{ name }</h2>
+          </div>
+
           <hr />
           <PortableText value={description} components={ptComponents} />
         </div>
@@ -34,7 +42,7 @@ const Session = (props) => {
 
 export async function getStaticPaths() {
     const paths = await sClient.fetch(
-      `*[_type == "session" && defined(slug.current)][].slug.current`
+      `*[_type == "presenter" && defined(slug.current)][].slug.current`
     )
 
     const pathim = paths.map((slug) => ({params: {slug}}))
@@ -49,15 +57,15 @@ export async function getStaticProps(context) {
 
     const { slug = null } = context.params
 
-    const session = await sClient.fetch(
-      `*[_type == "session" && slug.current == "${slug}"]`
+    const presenter = await sClient.fetch(
+      `*[_type == "presenter" && slug.current == "${slug}"]`
     )
 
     return {
       props: {
-        session
+        presenter
       }
     }
 }
 
-export default Session
+export default Presenter

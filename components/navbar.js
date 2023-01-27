@@ -20,10 +20,10 @@ export default function Navbar(){
     const manageNavbar = () => {
         //const navbarY = document.querySelector('.navbar').getBoundingClientRect().y
         const tripPoint = window.scrollY + 100
-        console.log("---")
-        console.log("window height:", window.innerHeight)
+
+        //console.log("window height:", window.innerHeight)
         //console.log("navbarY:", navbarY)
-        console.log("SCROLL Y:", window.scrollY)
+        //console.log("SCROLL Y:", window.scrollY)
         if ( tripPoint > window.innerHeight ){
             setStuck(true)
         } else {

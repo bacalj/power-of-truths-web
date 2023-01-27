@@ -12,6 +12,7 @@ export default function Home({ sanityContent}) {
 
   const fields = sanityContent.homeContent[0]
   const sessions = sanityContent.sessionListings
+  const presenters = sanityContent.presenterListings
 
   return (
     <>
@@ -25,10 +26,7 @@ export default function Home({ sanityContent}) {
 
       <SiteTitle flying={true} subheading={fields.heroSubheading} />
 
-
       <Navbar />
-
-
 
       <main>
         <HomeContent
@@ -37,6 +35,7 @@ export default function Home({ sanityContent}) {
           schedule={fields.scheduleContent}
           register={fields.registerContent}
           video={fields.introVideo}
+          presenters={presenters}
         />
       </main>
 
@@ -48,7 +47,8 @@ export default function Home({ sanityContent}) {
 export async function getStaticProps(context) {
   const sanityContent = await sClient.fetch(`{
       "homeContent": *[_type == "home"],
-      "sessionListings": *[_type == "session" && !(_id in path("drafts.**"))] | order(order asc)
+      "sessionListings": *[_type == "session" && !(_id in path("drafts.**"))] | order(order asc),
+      "presenterListings": *[_type == "presenter" && !(_id in path("drafts.**"))] | order(order asc)
     }`)
   return {
     props: { sanityContent }, // passed to page component as props
