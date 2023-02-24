@@ -289,3 +289,31 @@ footer {
   object-fit: cover;
   margin-bottom:20px;
 }
+
+.tickets-wrapper {
+  margin: 80px auto;
+  width:90;
+  text-align: center;
+  margin-top:80px;
+}
+
+.tickets-wrapper div {
+  margin:20px auto;
+  padding:20px;
+  width: 70%;
+  border:1px solid #2E261F;
+  border-radius: 15px;
+}
+
+.ticket {
+  margin-top:40px;
+}
+
+.ticket-link  {
+  background-color: #2E261F;
+  padding: 15px;
+  font-weight: bold;
+  border-radius:9px;
+  color: aliceblue;
+  cursor: pointer;
+}
