@@ -47,7 +47,7 @@ export default function Navbar(){
                     <Link href="/#about">About</Link>
                 </div>
                 <div className="navbar-register-link">
-                    <Link href="/#register">Register</Link>
+                    <Link href="/tickets">Register</Link>
                 </div>
                 <div>
                     <Link href="/#schedule">Schedule</Link>
