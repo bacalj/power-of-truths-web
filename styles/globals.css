@@ -181,12 +181,6 @@ footer {
 
 }
 
-@media screen and ( max-height: 699px ) {
-  .flying.sitetitle {
-    padding-top: 112px;
-  }
-}
-
 #speakers, #speakers-subtitle {
   text-align: center;
   margin:2px;
@@ -203,6 +197,12 @@ footer {
   text-align: center;
   width:50%;
   padding:20px;
+}
+
+@media (max-width: 840px) {
+  .speaker-item {
+    width:100%;
+  }
 }
 
 .speaker-item img {
@@ -275,6 +275,12 @@ footer {
   position: relative;
 }
 
+@media (max-width: 840px) {
+  .poster {
+    padding:0px;
+  }
+}
+
 .poster-text {
   padding:20px;
   background-color: rgba(0,0,0,0.9);
@@ -282,6 +288,12 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+@media (max-width: 840px) {
+  .poster-text {
+    top:0;
+  }
 }
 
 .poster-text h1, h2, h3, h4 {
