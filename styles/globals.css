@@ -65,66 +65,6 @@ h2, h3, h4, .sitetitle, .navbar div {
   margin-top: 60px;
 }
 
-/*
-.titlecanvas {
-  height:400px;
-  height: calc(100vh - 80px);
-  background-color: #000;
-  background:url('/sojourner.png');
-  background-position-x: 90%;
-  background-position-y:50%;
-  backdrop-filter: grayscale(90%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  z-index:100;
-  animation: fadein 3s;
-}
-*/
-
-.titlecanvas {
-  height: 500px;
-  height: calc(100vh - 88px);
-}
-
-/* @keyframes fadein {
-  from {opacity: 0.0;}
-  to {opacity: 1;}
-} */
-
-/* .titlecanvas::after {
-  content: "";
-  height:100vh;
-  width: 100%;
-  background-color: rgba(39, 38, 36, 0.7);
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:200;
-} */
-
-/* .sitetitle {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height:100%;
-  font-size: 400%;
-  color:white;
-  position: relative;
-}
-
-.sub {
-  font-size: 120%;
-  color:aliceblue;
-  position: absolute;
-  top: 20px;
-  text-align: center;
-  font-family: 'Special Elite';
-  z-index:300 !important;
-  width:100%;
-} */
-
 .sub a {
   text-decoration: underline;
 }
@@ -142,27 +82,6 @@ h2, h3, h4, .sitetitle, .navbar div {
   display:flex;
   flex-direction: row;
 }
-
-
-/* .filterator {
-  position: absolute;
-  height:calc(100vh - 80px);
-  width:100%;
-  top:0;
-  background: #000;
-  background: linear-gradient(0deg, rgba(46,38,31,1) 0%, rgba(46,38,31,0.5369565217391304) 62%);
-} */
-/* .titlecanvas.small {
-  height:100px;
-  background-color: #000;
-  color:whitesmoke;
-  display:flex;
-  align-content: center;
-} */
-
-/* .sitetitle {
-  display:flex;
-} */
 
 .reglink, footer a {
   text-decoration: underline;
@@ -282,7 +201,7 @@ footer {
 
 .speaker-item {
   text-align: center;
-  width:33.3%;
+  width:50%;
   padding:20px;
 }
 
@@ -292,6 +211,11 @@ footer {
   height: 200px;
   object-fit: cover;
   margin-bottom:20px;
+}
+
+.speaker-item a {
+  text-decoration: none;
+  font-weight: 900;
 }
 
 .tickets-wrapper {
