@@ -4,8 +4,8 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
     font-family: 'Open Sans';
-  background-color: rgb(247, 247, 244);
-  color: #2E261F;
+  /* background-color: rgb(247, 247, 244); */
+  color: #000;
   font-size: 105%;
 }
 
@@ -28,22 +28,14 @@ h2, h3, h4, .sitetitle, .navbar div {
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #2E261F;
+  background-color: #000;
   color:white;
   align-content:center;
   height: 80px;
-}
-
-.stuck.navbar {
-  top: 0;
   position: fixed;
-  width:100%;
-}
-
-.free.navbar {
-  position: inherit;
-  background: rgb(46,38,31);
-  /* background: linear-gradient(180deg, rgba(46,38,31,1) 0%, rgb(37, 30, 24) 54%);} */
+  top:0;
+  z-index: 10000;
+  width: 100%;
 }
 
 .navbar nav, .navbar div {
@@ -73,10 +65,11 @@ h2, h3, h4, .sitetitle, .navbar div {
   margin-top: 60px;
 }
 
+/*
 .titlecanvas {
-  /* height:400px; */
+  height:400px;
   height: calc(100vh - 80px);
-  /* background-color: #2E261F; */
+  background-color: #000;
   background:url('/sojourner.png');
   background-position-x: 90%;
   background-position-y:50%;
@@ -87,11 +80,17 @@ h2, h3, h4, .sitetitle, .navbar div {
   z-index:100;
   animation: fadein 3s;
 }
+*/
 
-@keyframes fadein {
+.titlecanvas {
+  height: 500px;
+  height: calc(100vh - 88px);
+}
+
+/* @keyframes fadein {
   from {opacity: 0.0;}
   to {opacity: 1;}
-}
+} */
 
 /* .titlecanvas::after {
   content: "";
@@ -104,7 +103,7 @@ h2, h3, h4, .sitetitle, .navbar div {
   z-index:200;
 } */
 
-.sitetitle {
+/* .sitetitle {
   display:flex;
   flex-direction: row;
   justify-content: center;
@@ -124,7 +123,7 @@ h2, h3, h4, .sitetitle, .navbar div {
   font-family: 'Special Elite';
   z-index:300 !important;
   width:100%;
-}
+} */
 
 .sub a {
   text-decoration: underline;
@@ -145,17 +144,17 @@ h2, h3, h4, .sitetitle, .navbar div {
 }
 
 
-.filterator {
+/* .filterator {
   position: absolute;
   height:calc(100vh - 80px);
   width:100%;
   top:0;
-  background: rgb(46,38,31);
+  background: #000;
   background: linear-gradient(0deg, rgba(46,38,31,1) 0%, rgba(46,38,31,0.5369565217391304) 62%);
-}
+} */
 /* .titlecanvas.small {
   height:100px;
-  background-color: #2E261F;
+  background-color: #000;
   color:whitesmoke;
   display:flex;
   align-content: center;
@@ -175,7 +174,7 @@ footer {
   align-content: center;
   padding:60px;
   color:white;
-  background-color: #2E261F;
+  background-color: #000;
   margin-top:60px;
   font-family: 'Special Elite';
 }
@@ -242,20 +241,25 @@ footer {
 }
 
 .navbar-register-link a {
-  color:lightskyblue !important;
+  color:#17B15A !important;
   padding: 15px 13px 12px 13px;
   border-radius:3px;
-  border:2px solid lightskyblue;
+  border:2px solid #17B15A;;
+}
+
+.register-wrap {
+  margin-top: 20px;
 }
 
 .register-wrap p a {
   padding: 15px 16px 12px 16px;
-  border:2px solid lightskyblue;
-  background-color:#2E261F;
-  color:lightskyblue;
+  border:2px solid #17B15A;;
+  background-color:#000;
+  color:#17B15A;;
   font-family: 'Special Elite';
   border-radius: 4px !important;
   font-size: 129%;
+
 }
 
 @media screen and ( max-height: 699px ) {
@@ -298,11 +302,20 @@ footer {
 }
 
 .tickets-wrapper div {
-  margin:20px auto;
-  padding:20px;
+  margin:40px auto;
+  padding:40px;
   width: 70%;
-  border:1px solid #2E261F;
+  border:1px solid #000;
   border-radius: 15px;
+  background: url('/megaphonefour.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  font-weight: 900;
+}
+
+.tickets-wrapper p, h2 {
+  margin-bottom:15px;
 }
 
 .ticket {
@@ -310,10 +323,83 @@ footer {
 }
 
 .ticket-link  {
-  background-color: #2E261F;
+  background-color: forestgreen;
   padding: 15px;
-  font-weight: bold;
+  font-weight: 900;
+  text-transform: uppercase;
   border-radius:9px;
-  color: aliceblue;
+  color: white;
   cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.sub {
+  background-color: #000;
+  color: lightgreen
+}
+
+.poster {
+  padding:20px;
+  margin-top:80px;
+  background:url('/megaphonethree.png');
+  height: 700px;
+  background-position-y: top;
+  background-position-x: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.poster-text {
+  padding:20px;
+  background-color: rgba(0,0,0,0.9);
+  max-width: 800px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.poster-text h1, h2, h3, h4 {
+  font-family: 'Special Elite';
+}
+
+.poster-text h1, h2, h3, h4, h5, p {
+  margin:3px;
+}
+
+.poster-text h2 {
+  font-size: 400%;
+  text-transform: uppercase;
+  color:yellow
+}
+
+.poster-text p {
+  margin-bottom: 6px;
+  font-size: 140%;
+}
+
+.poster-text p.info {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.poster-text p.second-annual {
+  font-family: 'Special Elite';
+  font-weight: 900;
+  color:rgb(245, 239, 239);
+  margin-bottom: 12px;
+}
+
+.poster-text h2 .power {
+  color:#17B15A;
+}
+
+.poster-text .arts-and {
+  color: #EE3224;
+  font-size: 260%;
+}
+
+.poster-text .info {
+  color:white;
+  font-weight: 900;
 }

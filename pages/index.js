@@ -2,9 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import HomeContent from '../components/home-content'
 import Navbar from '../components/navbar'
-import FlyingWords from '../components/site-title'
 import Footer from '../components/footer'
-import SiteTitle from '../components/site-title'
 import { sClient, ptComponents } from '../client'
 
 
@@ -22,11 +20,19 @@ export default function Home({ sanityContent}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="sub">Power of Truths is Presented in Collaboration with <a href="https://selfevidenteducation.com">Self-Evident Education</a></div>
-
-      <SiteTitle flying={true} subheading={fields.heroSubheading} />
+      {/* <div className="sub">Power of Truths is Presented in Collaboration with <a href="https://selfevidenteducation.com">Self-Evident Education</a></div> */}
 
       <Navbar />
+
+      <div className='poster'>
+        <div className="poster-text">
+          <p className='second-annual'>The 2nd Annual</p>
+          <h2><span className='power'>Power of </span>Truths</h2>
+          <h3 className='arts-and'>Arts & Education Festival</h3>
+          <p className='info date'>Saturday & Sunday, April 29-30, 2023</p>
+          <p className='info place'>Bombyx Center for Arts and Equity, Florence, MA</p>
+        </div>
+      </div>
 
       <main>
         <HomeContent

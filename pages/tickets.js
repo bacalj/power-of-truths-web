@@ -13,8 +13,8 @@ export default function Tickets() {
   return (
     <>
       <Head>
-        <title>Tickets: Power of Truths Conference, 2023</title>
-        <meta name="description" content="Power of Truths Conference" />
+        <title>Tickets: Power of Truths 2023</title>
+        <meta name="description" content="Power of Truths 2023" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -32,7 +32,7 @@ export default function Tickets() {
           </div>
           <div className='stripe-pass-two'>
             <h2>Festival Pass & Know the Ledge: Hiphop History Live</h2>
-            <p>The Power of Truths Arts and Education Festival presents Know the Ledge: Hiphop History Live. Join us for an evening of storytelling, music, and dance as we bring together amazing artists from multiple disciplines to tell important and often overlooked stories from the history of our country. Part theatre, part history lesson, part Hiphop music, join artists Akrobatik; members of Fire in Little Africa—Written Quincey, Krisheena Suarez, and iamDES; Marcia Gomes; Khalif Neville; Dutch Rebelle and more for an intense and entertaining trip through history.</p>
+            <p>The Power of Truths Arts and Education Festival presents Know the Ledge: Hiphop History Live. </p><p>Join us for an evening of storytelling, music, and dance as we bring together amazing artists from multiple disciplines to tell important and often overlooked stories from the history of our country. Part theatre, part history lesson, part Hiphop music, join artists Akrobatik; members of Fire in Little Africa—Written Quincey, Krisheena Suarez, and iamDES; Marcia Gomes; Khalif Neville; Dutch Rebelle and more for an intense and entertaining trip through history.</p>
             <p><em>Performance is Saturday, April 29 7-10PM at Bombyx Center for Arts and Equity</em></p>
             <p className='ticket'><a className='ticket ticket-link' href='https://buy.stripe.com/14kbLJatR35m1wIaEL'>Purchase $55</a></p>
 
