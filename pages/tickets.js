@@ -18,7 +18,7 @@ export default function Tickets() {
 
       <main>
         <div className='tickets-wrapper'>
-          <div className='stripe-pass-one'>
+          <div className='stripe-pass-one mt-6'>
             <h2>Purchse Tickets at the Link Below</h2>
             <a href='https://thirdrow.live/events/power-of-truths-2023/'>Purchase Tickets</a>
             {/* <h2>Festival Pass</h2>
