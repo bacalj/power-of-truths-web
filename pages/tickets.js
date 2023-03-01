@@ -17,9 +17,8 @@ export default function Tickets() {
       <Navbar />
 
       <main>
-        <div className='tickets-wrapper'>
+        <div className='tickets-wrapper pt-12'>
           <div className='stripe-pass-one mt-6'>
-            <h2>Purchse Tickets at the Link Below</h2>
             <a href='https://thirdrow.live/events/power-of-truths-2023/'>Purchase Tickets</a>
             {/* <h2>Festival Pass</h2>
             <h3>Saturday April 29 & Sunday, April 30 at Bombyx Center for Arts and Equity</h3>
