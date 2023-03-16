@@ -19,7 +19,7 @@ export default function Tickets() {
       <main>
         <div className='tickets-wrapper pt-12'>
           <div className='stripe-pass-one mt-6'>
-            <a href='https://thirdrow.live/events/power-of-truths-2023/'>Purchase Tickets</a>
+            <a href='https://bombyx.live/power-of-truths'>Purchase Tickets</a>
             {/* <h2>Festival Pass</h2>
             <h3>Saturday April 29 & Sunday, April 30 at Bombyx Center for Arts and Equity</h3>
             <p>With a Festival Pass, you will have access to all workshop, keynote, and panel sessions on Saturday (10 am-5 pm) and Sunday (11 am-4 pm). Lunch on Saturday is included with the Festival Pass.
