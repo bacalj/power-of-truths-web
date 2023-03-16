@@ -47,7 +47,7 @@ export default function Navbar(){
                     <Link href="/#about">About</Link>
                 </div>
                 <div className="navbar-register-link">
-                    <Link href="https://bombyx.live/power-of-truths">Register</Link>
+                    <Link href="https://bombyx.live/events/power-of-truths-2023/">Register</Link>
                 </div>
                 <div>
                     <Link href="/#schedule">Schedule</Link>
