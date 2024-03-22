@@ -61,7 +61,7 @@ export default function HomeContent(props) {
   return (
     <div className="homecontent">
 
-      <h2 id="speakers">Presenters & Performers</h2>
+      {/* <h2 id="speakers">Presenters & Performers</h2>
       <h4 id="speakers-subtitle">Full Program Coming Soon...</h4>
       <div className="speakers-wrap speakers-gallery">
         {presenters.map(s => presenterItem(s))}

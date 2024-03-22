@@ -15,7 +15,7 @@ export default function Home({ sanityContent}) {
   return (
     <>
       <Head>
-        <title>Power of Truths Conference, 2023</title>
+        <title>Power of Truths Conference, 2024</title>
         <meta name="description" content="Power of Truths Conference" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -26,10 +26,10 @@ export default function Home({ sanityContent}) {
 
       <div className='poster'>
         <div className="poster-text">
-          <p className='second-annual'>The 2nd Annual</p>
+          <p className='second-annual'>The 3rd Annual</p>
           <h2><span className='power'>Power of </span>Truths</h2>
           <h3 className='arts-and'>Arts & Education Festival</h3>
-          <p className='info date'>Saturday & Sunday, April 29-30, 2023</p>
+          <p className='info date'>Saturday & Sunday, April 5-6, 2024</p>
           <p className='info place'>Bombyx Center for Arts and Equity, Florence, MA</p>
         </div>
       </div>

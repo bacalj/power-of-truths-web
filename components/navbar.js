@@ -40,18 +40,14 @@ export default function Navbar(){
     return (
         <div className={ classim }>
             <div className="brand">
-                <Link href="/">Power of Truths 2023</Link>
+                <Link href="/">Power of Truths 2024</Link>
             </div>
             <nav>
-                <div>
-                    <Link href="/#about">About</Link>
-                </div>
+
                 <div className="navbar-register-link">
                     <Link href="https://bombyx.live/power-of-truths/">Register</Link>
                 </div>
-                <div>
-                    <Link href="/#schedule">Schedule</Link>
-                </div>
+
             </nav>
         </div>
     )
