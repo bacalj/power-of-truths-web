@@ -29,7 +29,7 @@ export default function Home({ sanityContent}) {
           <p className='second-annual'>The 3rd Annual</p>
           <h2><span className='power'>Power of </span>Truths</h2>
           <h3 className='arts-and'>Arts & Education Festival</h3>
-          <p className='info date'>Saturday & Sunday, April 5-6, 2024</p>
+          <p className='info date'>Friday & Saturday, April 5-6, 2024</p>
           <p className='info place'>Bombyx Center for Arts and Equity, Florence, MA</p>
         </div>
       </div>
